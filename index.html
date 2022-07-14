@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/list.ico">
+</head>
+<body>
+    <header>
+        <h1 class="nombre_sitio">To Do <span>List App</span></h1>
+    </header>
+    <main class="Contenedor_tareas">
+        <h2>Lista de tareas</h2>
+        <div class="contenedor_tareas">
+            <div class="lista_tareas">
+                <div class="tarea-hacer task">
+                    <h3>Tareas pendientes</h3>
+                    <div class="TareaPendienteLista" id="TareaPendienteLista"></div>
+                </div>
+                <div class="tarea_proceso task">
+                    <h3>Tareas en proceso</h3>
+                    <div class="TareaProcesoLista" id="TareaProcesoLista"></div>
+                </div>
+                <div class="tarea_finalizadas task">
+                    <h3>Tareas finalizadas</h3>
+                    <div class="TareaFinalizadaLista" id="TareaFinalizadaLista"></div>
+                </div>
+            </div>
+            <div class="agregar_tarea">
+                <input class="controlbtn" type="button" id="boton" value="Agregar Tarea">
+                <form class="nueva_tarea" id="nueva_tarea"></form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js" type = "module"></script>
+</html>
