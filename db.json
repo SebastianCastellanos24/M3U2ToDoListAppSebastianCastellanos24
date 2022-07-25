@@ -1,0 +1,28 @@
+{  
+    "tareasD": [
+        {   
+            "id": 1,
+            "title": "Tarea por defecto 1",
+            "descripcion": "Esta es la descripcion de la tarea por defecto 1",
+            "responsable": "Usuario Zero",
+            "deadline": "1661563950",
+            "created": "1658799150"
+        },
+        {   
+            "id": 2,
+            "title": "Tarea por defecto 2",
+            "descripcion": "Esta es la descripcion de la tarea por defecto 2",
+            "responsable": "Usuario Zero",
+            "deadline": "1655861550",
+            "created": "1660267950"
+        },
+        {
+            "id": 3,
+            "title": "Tarea por defecto 3",
+            "descripcion": "Esta es la descripcion de la tarea por defecto 3",
+            "responsable": "Usuario Zero",
+            "deadline": "1654911150",
+            "created": "1654911150"     
+        }
+    ]
+}  
