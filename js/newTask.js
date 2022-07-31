@@ -1,33 +1,27 @@
 const 
-    boton2 = document.getElementById('boton2'),
-    tareaHacer = document.getElementById('tareaHacer'),
+    buttonNewTask = document.getElementById('buttonNewTask'),
+    toDoTask = document.getElementById('toDoTask'),
     title = document.getElementById('title'),
-    descripcion = document.getElementById('descripcion'),
-    responsable = document.getElementById('responsable'),
-    fecha = document.getElementById('fecha')
+    description = document.getElementById('description'),
+    taskOwner = document.getElementById('taskOwner'),
+    deadLine = document.getElementById('deadLine')
 
+const today = moment();
 
-moment.locale('es');
-const hoy = moment();
-const format = moment(hoy).format("DD/MM/YYYY");
-
-
-
-boton2.addEventListener('click', function(){
-    if(title.value == '' || descripcion.value == '' || responsable.value == '' || fecha.value == ''){
+buttonNewTask.addEventListener('click', function(){
+    if(title.value == '' || description.value == '' || taskOwner.value == '' || deadLine.value == ''){
         alert('Todos los campos son obligatorios');
     } else{
-        tareaHacer.innerHTML += 
-        `<div class="contenedortarea">
+        taskProcess.innerHTML += 
+        `<div class="containerNewTask">
             <h4>${title.value}</h4>
-            <div class="infotarea">
-                <p>Descripción: ${descripcion.value}</p>
-                <hr><p>Responsable: ${responsable.value}</p>
-                <p>Deadline: ${moment(fecha.value).format("DD/MM/YYYY")}</p>
-                <p>Creada el: ${format}</p>
+            <div class="infoTask">
+                <p>Descripción: ${description.value}</p>
+                <hr><p>Responsable: ${taskOwner.value}</p>
+                <p>Deadline: ${moment(deadLine.value).format("DD/MM/YYYY")}</p>
+                <p>Creada el: ${moment(today).format("DD/MM/YYYY")}</p>
             </div>
-            <div class="estado"></div>
+            <div class="stateTaskProcess"></div>
         </div>`
     }
-    
 })

@@ -20,7 +20,7 @@ h1{
     text-align: center;
     color: #fff;
     font-size: 6rem;
-    margin: 0.5rem 0;
+    margin: 3rem 0;
     font-weight: 900;
 }
 
@@ -50,17 +50,17 @@ hr{
     border-color: #ffc107;
 }
 
-.Contenedor_tareas{
-    width: 96%;
+.taskContainer{
+    width: 95%;
     margin: 0 auto;
 }
 
-.contenedor_tareas{
+.taskListContainer{
     width: 100%;
     column-gap: 2rem;
 }
 
-.lista_tareas{
+.listTasks{
     display: flex;
     justify-content: space-evenly;
 }
@@ -68,11 +68,6 @@ hr{
 p {
     margin: 0;
     font-size: 2rem;
-}
-
-.agregar_tarea{
-    justify-content: center;
-    height: 15rem;
 }
 
 .controlbtn{
@@ -109,23 +104,6 @@ p {
     font-weight: bold;
 }
 
-.nueva_tarea{
-    background-color: rgb(255, 255, 255 ,0.8);
-    color: #1B4A9B;
-    margin-top: 2rem;
-    border: solid 0.2rem #1B4A9B;
-    border-radius: 0.5rem;
-    width: 100%;
-    font-weight: bold;
-    padding: 1rem;
-}
-
-.nueva_tarea textarea{
-    resize: vertical;
-    min-height: 6rem;
-    max-height: 15rem;
-}
-
 .ctrlform{
     color: #1B4A9B;
     font-weight: 700;
@@ -138,27 +116,16 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.estado, .estado2, .estado3{
+.stateTask{
     width: 100%;
     height: 1rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     margin-bottom: 10px;
-}
-
-.estado{
-    background-color: #c1c7d0;
-}
-
-.estado2{
     background-color: #1B4A9B;
 }
 
-.estado3{
-    background-color: #21c300;
-}
-
-.contenedortarea{
+.containerNewTask{
     background-color: #e7e9f1;
     margin: 0.5rem;
     border-radius: 0.5rem;
@@ -166,15 +133,27 @@ p {
     box-shadow: 0.3rem 0.3rem 0.4rem #1B4A9B;
 }
 
-.contenedortarea:hover{
+.containerNewTask:hover{
     box-shadow: -0.3rem -0.3rem 0.4rem #1B4A9B;
 }
 
-.infotarea{
+.infoTask{
     background-color: #ffffff;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     margin: 0 0.5rem;
 }
 
-
+@media (max-width: 800px) {
+    .listTasks{
+        flex-direction: column;
+        margin-bottom: 15rem;
+    }
+    .task{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    h1{
+        font-size: 5rem;
+    }
+}

@@ -16,14 +16,16 @@
 </head>
 <body>
     <header>
-        <h1 class="nombre_sitio">To Do <span>List App</span></h1>
+        <h1>To Do <span>List App</span></h1>
     </header>
-    <main class="Contenedor_tareas">
+    <main class="taskContainer">
 
+        <!-- Call Modal -->
         <div class="d-flex flex-row-reverse">
             <button type="button" class="mt-2 mx-2 mb-4 p-3 btn btn-primary fs-3 fw-bold" data-bs-toggle="modal" data-bs-target="#myModal">Agregar Tarea</button>
         </div>
 
+        <!-- Modal -->
         <div class="modal" id="myModal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -33,25 +35,24 @@
                         <h4 class="modal-title">Tarea Nueva</h4>
                     </div>
 
-                    <!-- Modal body -->
+                    <!-- Modal Body -->
                     <div class="modal-body">
                         <label for="title" class="ctrlform">Titulo</label>
                         <input id="title" class="ctrlform imputctrl" type="text" placeholder="Titulo de la tarea">
 
-                        <label for="descripcion" class="ctrlform">Descripcion</label>
-                        <textarea id="descripcion" class="ctrlform imputctrl" placeholder="Describe la tarea"></textarea>
+                        <label for="description" class="ctrlform">Descripción</label>
+                        <textarea id="description" class="ctrlform imputctrl" placeholder="Describe la tarea"></textarea>
 
-                        <label for="responsable" class="ctrlform">Responsable</label>
-                        <input id="responsable" class="ctrlform imputctrl" type="text" placeholder="Responsable">
+                        <label for="taskOwner" class="ctrlform">Responsable</label>
+                        <input id="taskOwner" class="ctrlform imputctrl" type="text" placeholder="Responsable">
 
-                        <label for="fecha" class="ctrlform">Fecha entrega</label>
-                        <input id="fecha" class="ctrlform imputctrl" type="date">
+                        <label for="deadLine" class="ctrlform">Fecha entrega</label>
+                        <input id="deadLine" class="ctrlform imputctrl" type="date">
 
-                        <input class="controlbtn ctrlform " type="button" id="boton2" value="Agregar">
-
+                        <input class="controlbtn ctrlform " type="button" id="buttonNewTask" value="Agregar">
                     </div>
 
-                    <!-- Modal footer -->
+                    <!-- Modal Footer -->
                     <div class="modal-footer">
                         <button type="button" class="controlbtn ctrlform" data-bs-dismiss="modal">Close</button>
                     </div>
@@ -59,22 +60,24 @@
             </div>
         </div>
 
-        <div class="contenedor_tareas">
-            <div class="lista_tareas">
+        <!-- Container all default task -->
+        <div class="taskListContainer">
+            <div class="listTasks">
 
-                <div class="tarea-hacer task" id = "tareaHacer">
+                <div class="task" id = "toDoTask">
                     <h3>Tareas pendientes</h3>
-                    <div class="TareaPendienteLista" id="TareaPendienteLista"></div>
+                    <div id="toDoTaskList"></div>
                 </div>
 
-                <div class="tarea_proceso task" id = "tareaProceso">
+                <!-- This div gonna get all new task, this is for default -->
+                <div class="task" id = "taskProcess">
                     <h3>Tareas en proceso</h3>
-                    <div class="TareaProcesoLista" id="TareaProcesoLista" ></div>
+                    <div id="taskProcessList" ></div>
                 </div>
 
-                <div class="tarea_finalizadas task"  id = "tareaFinalizadas">
+                <div class="task"  id = "taskEnded">
                     <h3>Tareas finalizadas</h3>
-                    <div class="TareaFinalizadaLista" id="TareaFinalizadaLista"></div>
+                    <div id="taskEndedList"></divid=>
                 </div>
                 
             </div>
@@ -83,15 +86,14 @@
     </main>
 </body>
 
-<!-- Librerias -->
+<!-- Outer Scripts -->
 <script src="https://momentjs.com/downloads/moment.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/sortable.js"></script>
 
 
-<!-- Scripts Locales -->
+<!-- Local Scripts -->
 <script src="js/index.js" type = "module"></script>
 <script src="js/drag.js" type = "module"></script>
 <script src="js/newTask.js" type = "module"></script>
